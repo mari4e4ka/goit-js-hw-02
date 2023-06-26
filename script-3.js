@@ -13,6 +13,8 @@ const add = function (a, b) {
 };
 // ВИКЛИК ФУНКЦІЇ
 
+console.log(add(1, 2));
+
 const sum1 = add(3, 4);
 console.log("1. Сума чисел: ", sum1);
 
