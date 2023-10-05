@@ -29,3 +29,12 @@ console.log("4. Сума чисел: ", sum4);
 
 const sum5 = add(8, 9);
 console.log("5. Сума чисел: ", sum5);
+
+
+function sayHi (x){
+  console.log(`Hello, this is my ${x} function!`);
+}
+sayHi(1);
+sayHi(2);
+sayHi(3);
+sayHi(4);
