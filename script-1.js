@@ -67,12 +67,7 @@
 
 // console.log(message);
 
-
-
-
-
 // МАСИВИ
-
 
 // const numbers = [12, 11, 300, 0, 5];
 // let bigestNumber = numbers[0];
@@ -94,8 +89,6 @@
 
 // message = message.slice(0, message.length - 2);
 // console.log(`Список чисел:`, message);
-
-
 
 // МЕТОДИ МАСИВІВ
 // SPLIT - перетворює рядок в масив
@@ -163,7 +156,6 @@
 
 // console.log(`Загальна сума елементів:`, totalSummary);
 
-
 // МЕТОДИ МАСИВІВ
 // PUSH (1, 3, 5) - додає в кінець масиву
 // POP () - видаляє останній елемент масиву - тільки один!!!
@@ -176,7 +168,6 @@
 // splise (1,4) - з якого індекса, і до якого елемента вирізати
 
 // SPLISE
-
 
 //  !!!!!!!!!!!!!SPLISE!!!!!!!!!!!!   ВИДАЛЯЄ ЕЛЕМЕНТ - splice(0, 5) (ІНДЕКС, скільки видалити)
 // const numbers = [1, 9, 4, 6, 4, 5];
@@ -197,7 +188,6 @@
 
 // console.log(numbers);
 
-
 //  !!!!!!!!!!!!!SPLISE!!!!!!!!!!!!   ЗАМІНЮЄ ЕЛЕМЕНТ - splice(0, 0, 555, 777) (ІНДЕКС, скільки видалити, які додати)
 // const numbers = [1, 9, 4, 6, 4, 5];
 // console.log(numbers);
@@ -206,4 +196,25 @@
 
 // console.log(numbers);
 
+// practise
 
+// const fruits = ["a", "b", "c"];
+
+// // for (let i = 0; i < fruits.length; i += 1) {
+// //   const num = i + 1;
+// //   console.log(`Фрукт номер ${num} це - ${fruits[i]}`);
+// // };
+
+// for (let i = 0, n=1; i < fruits.length; i += 1, n+=1) {
+//      console.log(`Фрукт номер ${n} це - ${fruits[i]}`);
+//   };
+
+const names = "A,B,C";
+const numbers = "1,2,3";
+
+const arr1 = names.split(",");
+const arr2 = numbers.split(",");
+
+for (let i = 0; i < arr1.length; i += 1) {
+  console.log(`користувач ${arr1[i]} телефон ${arr2[i]}`);
+}

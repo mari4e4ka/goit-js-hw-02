@@ -1,40 +1,40 @@
-// ФУНКЦІЇЇ
+// // ФУНКЦІЇЇ
 
-// ОГОЛОШЕННЯ ФУНКЦІЇ
-// const add = function (параметри-доступні тільки у межах функції){ аргументи }
+// // ОГОЛОШЕННЯ ФУНКЦІЇ
+// // const add = function (параметри-доступні тільки у межах функції){ аргументи }
 
-const add = function (a, b) {
-  // console.log(a);
-  // console.log(b);
-  const sum = a + b;
-  // console.log("a + b =", sum);
+// const add = function (a, b) {
+//   // console.log(a);
+//   // console.log(b);
+//   const sum = a + b;
+//   // console.log("a + b =", sum);
 
-  return sum;
-};
-// ВИКЛИК ФУНКЦІЇ
+//   return sum;
+// };
+// // ВИКЛИК ФУНКЦІЇ
 
-console.log(add(1, 2));
+// console.log(add(1, 2));
 
-const sum1 = add(3, 4);
-console.log("1. Сума чисел: ", sum1);
+// const sum1 = add(3, 4);
+// console.log("1. Сума чисел: ", sum1);
 
-const sum2 = add(5, 6);
-console.log("2. Сума чисел: ", sum2);
+// const sum2 = add(5, 6);
+// console.log("2. Сума чисел: ", sum2);
 
-const sum3 = add(6, 7);
-console.log("3. Сума чисел: ", sum3);
+// const sum3 = add(6, 7);
+// console.log("3. Сума чисел: ", sum3);
 
-const sum4 = add(7, 8);
-console.log("4. Сума чисел: ", sum4);
+// const sum4 = add(7, 8);
+// console.log("4. Сума чисел: ", sum4);
 
-const sum5 = add(8, 9);
-console.log("5. Сума чисел: ", sum5);
+// const sum5 = add(8, 9);
+// console.log("5. Сума чисел: ", sum5);
 
 
-function sayHi (x){
-  console.log(`Hello, this is my ${x} function!`);
-}
-sayHi(1);
-sayHi(2);
-sayHi(3);
-sayHi(4);
+// function sayHi (x){
+//   console.log(`Hello, this is my ${x} function!`);
+// }
+// sayHi(1);
+// sayHi(2);
+// sayHi(3);
+// sayHi(4);
