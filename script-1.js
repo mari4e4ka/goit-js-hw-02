@@ -209,12 +209,61 @@
 //      console.log(`Фрукт номер ${n} це - ${fruits[i]}`);
 //   };
 
-const names = "A,B,C";
-const numbers = "1,2,3";
+// const names = "A,B,C";
+// const numbers = "1,2,3";
 
-const arr1 = names.split(",");
-const arr2 = numbers.split(",");
+// const arr1 = names.split(",");
+// const arr2 = numbers.split(",");
 
-for (let i = 0; i < arr1.length; i += 1) {
-  console.log(`користувач ${arr1[i]} телефон ${arr2[i]}`);
+// for (let i = 0; i < arr1.length; i += 1) {
+//   console.log(`користувач ${arr1[i]} телефон ${arr2[i]}`);
+// }
+
+// const text = "fff welkome to the fff fff fff future fff";
+// const arr = text.split(" ");
+// const arr1 = [];
+
+// for (let i = 0; i < arr.length; i += 1) {
+//   if (i === 0) {
+//     continue;
+//   } else if (i === arr.length - 1) {
+//     continue;
+//   } else arr1.push(arr[i]);
+// }
+// const text1=arr1.join(' ');
+// console.log(text);
+// console.log(arr);
+// console.log(arr1);
+// console.log(text1);
+
+
+// const text = "welkome to the future";
+// const text1 = text.split(' ').slice(1,-1).join(' ');
+// // arr.pop();
+// // arr.shift();
+
+// console.log(text1);
+
+
+// const text = "welkome to the future";
+
+// const arr = text.split('');
+// console.log(arr);
+
+// const arr1 = arr.reverse();
+// console.log(arr1);
+
+// const result=arr1.join(' ');
+// console.log(result);
+
+// const text = "welkome to the future";
+// const result=text.split('').reverse().join('');
+// console.log(result);
+
+
+const list = ['b', 'd', 'a', 'f'];
+const list1 =list;
+
+for (let i=0;i<list.length;i+=1){
+
 }
