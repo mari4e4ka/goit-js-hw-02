@@ -236,14 +236,12 @@
 // console.log(arr1);
 // console.log(text1);
 
-
 // const text = "welkome to the future";
 // const text1 = text.split(' ').slice(1,-1).join(' ');
 // // arr.pop();
 // // arr.shift();
 
 // console.log(text1);
-
 
 // const text = "welkome to the future";
 
@@ -260,10 +258,22 @@
 // const result=text.split('').reverse().join('');
 // console.log(result);
 
+// const list = ["d", "b", "k", "a", "f", "x", "p"];
 
-const list = ['b', 'd', 'a', 'f'];
-const list1 =list;
+// for (let i = 0; i < list.length; i += 1) {
+//   if (list[0] > list[i]) {
+//     const result = list.splice(i, 1)[0];
+//     list.unshift(result);
+//   }
+// }
+// console.log(list);
 
-for (let i=0;i<list.length;i+=1){
+// const r = "p" > "o";
+// console.log(r);
 
-}
+// const numbers = [111, 40, -13, 23, 28, 52, 34];
+// let min = numbers[0];
+// for (const value of numbers) {
+//   value < min ? (min = value) : (min = min);
+// }
+// console.log(min);
