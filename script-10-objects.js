@@ -86,25 +86,41 @@
 // }
 // console.log(sum);
 
-const stone = [
-  {
-    name: "Gold",
-    price: 1300,
-    quantity: 2,
-  },
-  {
-    name: "Silver",
-    price: 300,
-    quantity: 10,
-  },
-];
+// const stones = [
+//   {
+//     name: "Gold",
+//     price: 1300,
+//     quantity: 2,
+//   },
+//   {
+//     name: "Silver",
+//     price: 300,
+//     quantity: 10,
+//   },
+// ];
 
-function calcTotalPrice (stone){
+// function calcTotalPrice(stonelist, stoneName) {
+//   for (const stone of stonelist) {
+//     if (stone.name === stoneName) {
+//       return (stone.price * stone.quantity);
+//     }
+//   }
+//   return "No";
+// }
 
-  for(let i=0; i<stone.lenght; i+=1){
-    const totalPrice = stone[i].price*stone[i].quantity;
-  console.log(`Загальна вартість = ${totalPrice}` )
-  }
-}
+// console.log(`Загальна вартість ${calcTotalPrice(stones, "Gold")}`);
+// console.log(calcTotalPrice(stones, "Silver"));
+// console.log(calcTotalPrice(stones, "Iron"));
 
-calcTotalPrice (stone);
+// function calcTotalPrice(stonelist, stoneName) {
+//   let totalPrice = 0;
+//   for (let i = 0; i < stonelist.length; i++) {
+//     if (stonelist[i].name === stoneName) {
+//       totalPrice = stonelist[i].price * stonelist[i].quantity;
+//       console.log(`Загальна вартість ${stoneName} = ${totalPrice}`);
+//     }
+//   }
+// }
+
+// calcTotalPrice(stones, "Gold");
+// calcTotalPrice(stones, "Silver");
