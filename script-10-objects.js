@@ -124,3 +124,74 @@
 
 // calcTotalPrice(stones, "Gold");
 // calcTotalPrice(stones, "Silver");
+
+const transaction = {
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
+};
+
+Object.freeze(transaction);
+
+const account = {
+  balance: 0,
+  transactions: [],
+
+  createTransaction(amound, type) {
+    const transaction = {
+      id: 0,
+      type: type,
+      amound: amound,
+    };
+
+    return transaction;
+  },
+
+  deposit(amound) {
+    if (amound <= 0) {
+      return console.log("Введіть додатнє число");
+    }
+    const currentTransaction = this.createTransaction(
+      amound,
+      transaction.DEPOSIT
+    );
+    this.transactions.push(currentTransaction);
+    this.balance += amound;
+    return console.log("Ваші кошти зараховано на рахунок");
+  },
+
+  withdraw(amound) {
+    if (amound > this.balance) {
+      return console.log("Недостатньо грошей на рахунку");
+    } else if (amound <= 0) {
+      return console.log("Введіть додатнє число");
+    }
+
+    this.transactions.push(
+      this.createTransaction(amound, transaction.WITHDRAW)
+    );
+    this.balance -= amound;
+    return console.log("Отримайте готівку");
+  },
+
+  getBalance() {
+    return account.balance;
+  },
+
+  getTransactionDetail(id) {
+    for (const transaction of this.transactions) {
+      if (id === transaction.id) {
+        return transaction;
+      }
+      return "empty"
+    }
+  },
+};
+
+account.deposit(1000);
+
+account.withdraw(100);
+
+console.log(account.transactions);
+console.log(`Account balance: ${account.getBalance()}$`);
+
+console.log(account.getTransactionDetail(0));
