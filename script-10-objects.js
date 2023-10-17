@@ -138,7 +138,7 @@ const account = {
 
   createTransaction(amound, type) {
     const transaction = {
-      id: 0,
+      id: Date.now(),
       type: type,
       amound: amound,
     };
@@ -182,8 +182,20 @@ const account = {
       if (id === transaction.id) {
         return transaction;
       }
-      return "empty"
+      return "empty";
     }
+  },
+
+  getTransactionTotal(type) {
+    let summ= 0;
+
+    for (const transaction of this.transactions) {
+      if (transaction.type === type) {
+        summ+=transaction.amound;
+      }
+    }
+
+    return summ;
   },
 };
 
@@ -195,3 +207,5 @@ console.log(account.transactions);
 console.log(`Account balance: ${account.getBalance()}$`);
 
 console.log(account.getTransactionDetail(0));
+
+console.log(account.getTransactionTotal("deposit"));
