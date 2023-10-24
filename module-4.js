@@ -47,7 +47,56 @@
 
 // console.log('Після таймауту');
 
-const filter = function (array, callback) {
+// const filter = function (array, callback) {
+//   const filteredArr = [];
+//   for (const el of array) {
+//     if (callback(el)) {
+//       filteredArr.push(el);
+//     }
+//   }
+
+//   return filteredArr;
+// };
+
+// const isBigNumber = function (value) {
+//   return value >= 10;
+// };
+
+// const isNegNumber = function (value) {
+//   return value < 0;
+// };
+
+// console.log(filter([10, 9, 23, -3, 144, 0, -15, 55, 5], isBigNumber));
+// console.log(filter([10, 9, 23, -3, 144, 0, -15, 55, 5], isNegNumber));
+
+// const fruits = [
+//   {
+//     name: "apple",
+//     quantity:0,
+//     isFresh:false,
+//   },
+//   {
+//     name: "pear",
+//     quantity:60,
+//     isFresh:true,
+//   },
+//   {
+//     name: "lemon",
+//     quantity:120,
+//     isFresh:false,
+//   },
+// ];
+
+// const isInStore = function(object){
+// return object.quantity>0;
+// }
+
+// const isFresh =(object)=>{return object.isFresh};
+// console.log('Список усіх фруктів',fruits);
+// console.log('Фрукти наявні в магазині',filter(fruits, isInStore));
+// console.log('Свіжі фрукти',filter(fruits, isFresh));
+
+const filter = (array, callback) => {
   const filteredArr = [];
   for (const el of array) {
     if (callback(el)) {
@@ -58,13 +107,9 @@ const filter = function (array, callback) {
   return filteredArr;
 };
 
-const isBigNumber = function (value) {
-  return value >= 10;
-};
+const isBigNumber = (value) => value >= 10;
 
-const isNegNumber = function (value) {
-  return value < 0;
-};
+const isNegNumber = (value) => value < 0;
 
 console.log(filter([10, 9, 23, -3, 144, 0, -15, 55, 5], isBigNumber));
 console.log(filter([10, 9, 23, -3, 144, 0, -15, 55, 5], isNegNumber));
@@ -72,26 +117,25 @@ console.log(filter([10, 9, 23, -3, 144, 0, -15, 55, 5], isNegNumber));
 const fruits = [
   {
     name: "apple",
-    quantity:0,
-    isFresh:false,
+    quantity: 0,
+    isFresh: false,
   },
   {
     name: "pear",
-    quantity:60,
-    isFresh:true,
+    quantity: 60,
+    isFresh: true,
   },
   {
     name: "lemon",
-    quantity:120,
-    isFresh:false,
+    quantity: 120,
+    isFresh: false,
   },
 ];
 
-const isInStore = function(object){
-return object.quantity>0;
-}
+const isInStore = (object) => object.quantity > 0;
 
-const isFresh =(object)=>{return object.isFresh};
-console.log('Список усіх фруктів',fruits);
-console.log('Фрукти наявні в магазині',filter(fruits, isInStore));
-console.log('Свіжі фрукти',filter(fruits, isFresh));
+const isFresh = (object) => object.isFresh;
+
+console.log("Список усіх фруктів", fruits);
+console.log("Фрукти наявні в магазині", filter(fruits, isInStore));
+console.log("Свіжі фрукти", filter(fruits, isFresh));
