@@ -96,46 +96,65 @@
 // console.log('Фрукти наявні в магазині',filter(fruits, isInStore));
 // console.log('Свіжі фрукти',filter(fruits, isFresh));
 
-const filter = (array, callback) => {
-  const filteredArr = [];
-  for (const el of array) {
-    if (callback(el)) {
-      filteredArr.push(el);
-    }
-  }
+// const filter = (array, callback) => {
+//   const filteredArr = [];
+//   for (const el of array) {
+//     if (callback(el)) {
+//       filteredArr.push(el);
+//     }
+//   }
 
-  return filteredArr;
-};
+//   return filteredArr;
+// };
 
-const isBigNumber = (value) => value >= 10;
+// const isBigNumber = (value) => value >= 10;
 
-const isNegNumber = (value) => value < 0;
+// const isNegNumber = (value) => value < 0;
 
-console.log(filter([10, 9, 23, -3, 144, 0, -15, 55, 5], isBigNumber));
-console.log(filter([10, 9, 23, -3, 144, 0, -15, 55, 5], isNegNumber));
+// console.log(filter([10, 9, 23, -3, 144, 0, -15, 55, 5], isBigNumber));
+// console.log(filter([10, 9, 23, -3, 144, 0, -15, 55, 5], isNegNumber));
 
-const fruits = [
-  {
-    name: "apple",
-    quantity: 0,
-    isFresh: false,
-  },
-  {
-    name: "pear",
-    quantity: 60,
-    isFresh: true,
-  },
-  {
-    name: "lemon",
-    quantity: 120,
-    isFresh: false,
-  },
-];
+// const fruits = [
+//   {
+//     name: "apple",
+//     quantity: 0,
+//     isFresh: false,
+//   },
+//   {
+//     name: "pear",
+//     quantity: 60,
+//     isFresh: true,
+//   },
+//   {
+//     name: "lemon",
+//     quantity: 120,
+//     isFresh: false,
+//   },
+// ];
 
-const isInStore = (object) => object.quantity > 0;
+// const isInStore = (object) => object.quantity > 0;
 
-const isFresh = (object) => object.isFresh;
+// const isFresh = (object) => object.isFresh;
 
-console.log("Список усіх фруктів", fruits);
-console.log("Фрукти наявні в магазині", filter(fruits, isInStore));
-console.log("Свіжі фрукти", filter(fruits, isFresh));
+// console.log("Список усіх фруктів", fruits);
+// console.log("Фрукти наявні в магазині", filter(fruits, isInStore));
+// console.log("Свіжі фрукти", filter(fruits, isFresh));
+
+// const foo = () => "Mango";
+// console.log(foo());
+
+// function nextInLine(arr, item) {
+//   arr.push(item);
+//   const item1 = arr[0];
+//   arr.shift();
+//   return item1;
+// }
+
+
+// const testArr = [1, 2, 3, 4, 5];
+
+// console.log(nextInLine(testArr, 10));
+
+// console.log(testArr);
+// console.log(testArr[4]);
+
