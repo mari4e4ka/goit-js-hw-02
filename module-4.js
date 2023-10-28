@@ -199,32 +199,74 @@
 // }
 // console.log(caseInSwitch("h"));
 
-function sequentialSizes(val) {
-  let answer = "";
-  switch (val) {
-    case 1:
-    case 2:
-    case 3:
-      answer = "Low";
-      break;
-    case 4:
-    case 5:
-    case 6:
-      answer = "Mid";
-      break;
-    case 7:
-    case 8:
-    case 9:
-      answer = "High";
-      break;
-    default:
-      answer = "uncorect number";
-  }
+// function sequentialSizes(val) {
+//   let answer = "";
+//   switch (val) {
+//     case 1:
+//     case 2:
+//     case 3:
+//       answer = "Low";
+//       break;
+//     case 4:
+//     case 5:
+//     case 6:
+//       answer = "Mid";
+//       break;
+//     case 7:
+//     case 8:
+//     case 9:
+//       answer = "High";
+//       break;
+//     default:
+//       answer = "uncorect number";
+//   }
 
+//   // Змініть код лише над цим рядком
+//   return answer;
+// }
+
+// sequentialSizes(8);
+
+// console.log(sequentialSizes(2));
+
+// Зміна рахунку	Карти
+// +1	2, 3, 4, 5, 6
+// 0	7, 8, 9
+// -1	10, 'J', 'Q', 'К', 'A'
+// Ви писатимете функцію підрахунку карт.
+// Вона отримає параметр card, який може бути числом або рядком, а також збільшуватиме
+// або зменшуватиме глобальну змінну count, відповідно до значення карти (див. таблицю).
+// Тоді функція поверне рядок з поточним підрахунком і рядок Bet, якщо підрахунок більше нуля,
+// або Hold, якщо підрахунок дорівнює або менше нуля. Між поточним підрахунком та рішенням гравця
+// (Bet або Hold) повинен бути один пробіл.
+
+// Приклад виводів: -3 Hold або 5 Bet
+
+let count = 0;
+
+function cc(card) {
+  if (card === 2 || card === 3 || card === 4 || card === 5 || card === 6) {
+    count += 1;
+  } else if (
+    card === 10 ||
+    card === "A" ||
+    card === "K" ||
+    card === "Q" ||
+    card === "J"
+  ) {
+    count -= 1;
+  } 
+
+  return count>0? `${count} Bet`:`${count} Hold`;
   // Змініть код лише над цим рядком
-  return answer;
 }
 
-sequentialSizes(8);
-
-console.log(sequentialSizes(2));
+console.log(cc(7));
+console.log(cc(8));
+console.log(cc(9));
+console.log(cc("K"));
+console.log(cc("A"));
+console.log(cc("K"));
+console.log(cc("A"));
+console.log(cc("K"));
+console.log(cc("A"));
