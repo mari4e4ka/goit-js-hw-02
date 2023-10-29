@@ -242,31 +242,104 @@
 
 // Приклад виводів: -3 Hold або 5 Bet
 
-let count = 0;
+// let count = 0;
 
-function cc(card) {
-  if (card === 2 || card === 3 || card === 4 || card === 5 || card === 6) {
-    count += 1;
-  } else if (
-    card === 10 ||
-    card === "A" ||
-    card === "K" ||
-    card === "Q" ||
-    card === "J"
-  ) {
-    count -= 1;
-  } 
+// function cc(card) {
+//   if (card === 2 || card === 3 || card === 4 || card === 5 || card === 6) {
+//     count += 1;
+//   } else if (
+//     card === 10 ||
+//     card === "A" ||
+//     card === "K" ||
+//     card === "Q" ||
+//     card === "J"
+//   ) {
+//     count -= 1;
+//   } 
 
-  return count>0? `${count} Bet`:`${count} Hold`;
-  // Змініть код лише над цим рядком
-}
+//   return count>0? `${count} Bet`:`${count} Hold`;
+//   // Змініть код лише над цим рядком
+// }
 
-console.log(cc(7));
-console.log(cc(8));
-console.log(cc(9));
-console.log(cc("K"));
-console.log(cc("A"));
-console.log(cc("K"));
-console.log(cc("A"));
-console.log(cc("K"));
-console.log(cc("A"));
+// console.log(cc(7));
+// console.log(cc(8));
+// console.log(cc(9));
+// console.log(cc("K"));
+// console.log(cc("A"));
+// console.log(cc("K"));
+// console.log(cc("A"));
+// console.log(cc("K"));
+// console.log(cc("A"));
+
+
+// const myStorage = {
+//   "car": {
+//     "inside": {
+//       "glove box": "maps",
+//       "passenger seat": "crumbs"
+//      },
+//     "outside": {
+//       "trunk": "jack"
+//     }
+//   }
+// };
+
+// const gloveBoxContents = myStorage.car.inside["glove box"];
+// console.log(gloveBoxContents);
+
+
+// Функція updateRecords приймає 4 аргументи, представлені такими параметрами функції:
+
+// records — об’єкт, що містить декілька окремих альбомів
+// id — число, що позначає певний альбом в об’єкті records
+// prop — рядок, що позначає назву властивості альбому, яку потрібно оновити
+// value — рядок, що містить інформацію, яка використовується для оновлення властивості альбому
+// Завершіть функцію, використовуючи правила нижче, щоб змінити об’єкт, переданий до функції.
+
+
+//  Потім додайте value як останній елемент у масиві tracks альбому.
+// Примітка: копія об’єкту recordCollection використовується для тестів. Ви не повинні напряму змінювати об’єкт recordCollection.
+
+// const recordCollection = {
+//   2548: {
+//     albumTitle: 'Slippery When Wet',
+//     artist: 'Bon Jovi',
+//     tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//   },
+//   2468: {
+//     albumTitle: '1999',
+//     artist: 'Prince',
+//     tracks: ['1999', 'Little Red Corvette']
+//   },
+//   1245: {
+//     artist: 'Robert Palmer',
+//     // tracks: []
+//   },
+//   5439: {
+//     albumTitle: 'ABBA Gold'
+//   }
+// };
+
+// // Змініть код лише під цим рядком
+// function updateRecords(records, id, prop, value) {
+//   if (value===""){
+//     delete records[id][prop];
+//   }  else if (prop!=="tracks") {
+//     records[id][prop]=value;
+//   }else if (prop==="tracks") {
+//     if(!records[id].hasOwnProperty("tracks"))
+//     {records[id].tracks=[];
+//       records[id].tracks.push(value);
+//       return records;
+//     }
+//     records[id].tracks.push(value);
+//   };
+//   return records;
+// }
+
+// console.log(updateRecords(recordCollection, 1245, "tracks", "Addicted to Love"));
+// console.log(updateRecords(recordCollection, 1245, "tracks", "Ad"));
+
+// console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+
+
