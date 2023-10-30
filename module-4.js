@@ -255,7 +255,7 @@
 //     card === "J"
 //   ) {
 //     count -= 1;
-//   } 
+//   }
 
 //   return count>0? `${count} Bet`:`${count} Hold`;
 //   // Змініть код лише над цим рядком
@@ -270,7 +270,6 @@
 // console.log(cc("A"));
 // console.log(cc("K"));
 // console.log(cc("A"));
-
 
 // const myStorage = {
 //   "car": {
@@ -287,7 +286,6 @@
 // const gloveBoxContents = myStorage.car.inside["glove box"];
 // console.log(gloveBoxContents);
 
-
 // Функція updateRecords приймає 4 аргументи, представлені такими параметрами функції:
 
 // records — об’єкт, що містить декілька окремих альбомів
@@ -295,7 +293,6 @@
 // prop — рядок, що позначає назву властивості альбому, яку потрібно оновити
 // value — рядок, що містить інформацію, яка використовується для оновлення властивості альбому
 // Завершіть функцію, використовуючи правила нижче, щоб змінити об’єкт, переданий до функції.
-
 
 //  Потім додайте value як останній елемент у масиві tracks альбому.
 // Примітка: копія об’єкту recordCollection використовується для тестів. Ви не повинні напряму змінювати об’єкт recordCollection.
@@ -342,4 +339,46 @@
 
 // console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
 
+// const myArr = [2, 3, 4, 5, 6];
+// let total = 0;
+// for (let i = 0; i < myArr.length; i += 1) {
+//   total += myArr[i];
+// }
 
+// console.log(total);
+
+
+
+// РЕКУРСІЯ
+// function multiply(arr, n) {
+//     if (n <= 0) {
+//       return 1;
+//     } else {
+//       return multiply(arr, n - 1) * arr[n - 1];
+//     }
+//   };
+
+//   console.log(multiply([2,2,2,2],4));
+
+// Напишіть рекурсивну функцію sum(arr, n), яка повертає суму перших n елементів масиву arr.
+
+// let sum=0;
+// function summary(arr,n){
+//     for(let i=0; i<n; i+=1){
+//         sum+=arr[i];
+//     }
+//     return sum;
+// }
+
+// console.log(summary([2,2,2,2,2],5));
+
+
+// function summary(arr,n){
+//     if(n<=0){
+//         return 0;
+//     }else {
+//         return summary(arr,n-1)+arr[n-1];
+//     }
+// }
+// console.log(summary([2,2,2,2,2],5));
+// console.log(summary([2, 3, 4], 1));
