@@ -347,8 +347,6 @@
 
 // console.log(total);
 
-
-
 // РЕКУРСІЯ
 // function multiply(arr, n) {
 //     if (n <= 0) {
@@ -372,7 +370,6 @@
 
 // console.log(summary([2,2,2,2,2],5));
 
-
 // function summary(arr,n){
 //     if(n<=0){
 //         return 0;
@@ -382,3 +379,153 @@
 // }
 // console.log(summary([2,2,2,2,2],5));
 // console.log(summary([2, 3, 4], 1));
+
+// const contacts = [
+//   {
+//     firstName: "Akira",
+//     lastName: "Laine",
+//     number: "0543236543",
+//     likes: ["Pizza", "Coding", "Brownie Points"],
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//   },
+//   {
+//     firstName: "Sherlock",
+//     lastName: "Holmes",
+//     number: "0487345643",
+//     likes: ["Intriguing Cases", "Violin"],
+//   },
+//   {
+//     firstName: "Kristian",
+//     lastName: "Vos",
+//     number: "unknown",
+//     likes: ["JavaScript", "Gaming", "Foxes"],
+//   },
+// ];
+
+// function lookUpProfile(name, prop) {
+//   // Змініть код лише під цим рядком
+//   let message = ''
+//   for (const object of contacts) {
+//     if (object.firstName===name){
+
+//         if(object.hasOwnProperty(prop)){
+//             message=`${name} likes ${object[prop]}`;break;
+//         } else {message='No such property'; break}
+
+//     } else {message = 'No such contact';}
+//   }
+//   return message;
+
+//   // Змініть код лише над цим рядком
+// }
+
+// console.log(lookUpProfile("Krstian", "likes"));
+// console.log(lookUpProfile("Sherlock", "likes"));
+// console.log(lookUpProfile("Kristian", "lastName"));
+// console.log(lookUpProfile("Harry", "likes"));
+// console.log( lookUpProfile("Bob", "number"));
+// console.log(lookUpProfile("Bob", "potato"));
+// console.log(lookUpProfile("Akira", "address"));
+
+// const countArray = [];
+// function countdown(n){
+//   if (n < 1) {
+//    return countArray;
+//  } else {
+//    countArray.push(n);
+//   countdown((n-1));
+//    return countArray;
+//  }
+// }
+// console.log(countdown(10));
+
+// function countdown(n){
+//   return n<0 ? [] :[n,...countdown(n-1)];
+// }
+
+// console.table(countdown(25));
+
+// function rangeOfNumbers(startNum, endNum) {
+//   const result=[];
+//   do {
+//     result.push(startNum);
+//     startNum+=1;
+//   }while (startNum<=endNum)
+//   return result;
+// };
+
+// console.log(rangeOfNumbers(10,100));
+// const arr = [];
+// function rangeOfNumbers(startNum, endNum) {
+//   if (startNum > endNum) {
+//     return arr;
+//   } else {
+//     arr.push(startNum);
+//     rangeOfNumbers(startNum + 1,endNum);
+//     return arr;
+//   }
+// }
+
+
+// console.log(rangeOfNumbers(1,5));
+
+
+// function rangeOfNumbers(startNum, endNum) {
+//   return startNum>endNum? []:[startNum,...rangeOfNumbers(startNum+1,endNum)]
+//   }
+  
+  
+//   console.log(rangeOfNumbers(2,10));
+
+
+
+// Перебираючі методи масивів
+
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+const contactNames = contacts.map(contact=>contact.firstName);
+console.log(contactNames);
+const contactLikes = contacts.flatMap(contact=>contact.likes);
+console.log(contactLikes);
+
+const newContacts = contacts.map((contact, idx)=>({...contact, likes: [...contact.likes, "sing"], firstName: `${contact.firstName} ${((idx)+1)}`}));
+console.log(newContacts);
+
+const newContact = contacts.map((contact, idx)=>{
+    if (contact.firstName==="Harry"){
+    
+        contact.number= "1";
+    }
+    return contact
+});
+console.log(newContact);
