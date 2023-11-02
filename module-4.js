@@ -758,6 +758,27 @@
 //     likes: ["Hogwarts", "Magic", "Hagrid"],
 //     isOnline: false,
 //   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//     isOnline: false,
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//     isOnline: false,
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//     isOnline: false,
+//   },
 // ];
 
 // // const allLikes = contacts.reduce((likes, contact) => {
@@ -766,7 +787,48 @@
 // // }, []);
 // // console.log(allLikes);
 
-
-// const allLikes = contacts.reduce((likes, contact) => [...likes,...contact.likes], []);
+// const allLikes = contacts.reduce(
+//   (likes, contact) => [...likes, ...contact.likes],
+//   []
+// );
 // console.log(allLikes);
 
+// // const stat = allLikes.reduce((statAcc, like)=>{
+// //     if(statAcc[like]){
+// //         statAcc[like]+=1;
+// //         return statAcc;
+// //     }
+// //     statAcc[like]= 1;
+// //     return statAcc;
+// // },{});
+// // console.table(stat);
+
+// // const stat = allLikes.reduce((statAcc, like) => {
+// //   statAcc[like] ? (statAcc[like] += 1) : (statAcc[like] = 1);
+// //   return statAcc;
+// // }, {});
+// // console.table(stat);
+
+// const stat = allLikes.reduce(
+//   (rezAcc, like) => ({
+//     ...rezAcc,
+//     [like]: rezAcc[like] ? rezAcc[like] + 1 :  1,
+//   }),
+//   {}
+// );
+// console.table(stat);
+
+const cars = [
+  { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
+  { make: "Opel", model: "Op-6", amound: 1, price: 10000, onSale: true },
+  { make: "Mazda", model: "Mz-6", amound: 4, price: 44000, onSale: false },
+];
+console.table(cars);
+
+// const models = cars.map((car) => car.model);
+// console.log(models);
+
+const carsWithDiscount = (arr, disc) => arr.map((item) => {item.price=item.price -(item.price* disc);
+return item});
+
+console.table(carsWithDiscount(cars, 0.1));
