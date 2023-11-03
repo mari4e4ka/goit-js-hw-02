@@ -818,17 +818,103 @@
 // );
 // console.table(stat);
 
-const cars = [
-  { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
-  { make: "Opel", model: "Op-6", amound: 1, price: 10000, onSale: true },
-  { make: "Mazda", model: "Mz-6", amound: 4, price: 44000, onSale: false },
-];
-console.table(cars);
+// const cars = [
+//   { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
+//   { make: "Opel", model: "Op-6", amound: 1, price: 10000, onSale: true },
+//   { make: "Mazda", model: "Mz-6", amound: 4, price: 44000, onSale: false },
+// ];
+// console.table(cars);
 
 // const models = cars.map((car) => car.model);
 // console.log(models);
 
-const carsWithDiscount = (arr, disc) => arr.map((item) => {item.price=item.price -(item.price* disc);
-return item});
+// const carsWithDiscount = (arr, disc) => arr.map((item) => {item.price=item.price*(1-disc)
+// return item});
 
-console.table(carsWithDiscount(cars, 0.1));
+// console.table(carsWithDiscount(cars, 0.1));
+
+// const carsWithDiscount = (arr, disc) =>
+//   arr.map((item) => ({ ...item, price: item.price * (1 - disc) }));
+
+// console.table(carsWithDiscount(cars, 0.1));
+
+// const filterByPrise = (arr, threshold) =>
+//   arr.filter(({price}) => price <= threshold);
+
+// console.table(filterByPrise(cars, 10000));
+// console.table(filterByPrise(cars, 30000));
+// console.table(filterByPrise(cars, 50000));
+
+
+// const cars = [
+//   { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
+//   { make: "Opel", model: "Op-6", amound: 1, price: 10000, onSale: true },
+//   { make: "Mazda", model: "Mz-6", amound: 4, price: 44000, onSale: false },
+// ];
+// // console.table(cars);
+
+// const getCarsWithDiscount = arr=> arr.filter(({onSale}) => onSale);
+
+
+// console.table(getCarsWithDiscount(cars));
+
+
+
+// 
+
+// const cars = [
+//   { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
+//   { make: "Opel", model: "Op-6", amound: 1, price: 10000, onSale: true },
+//   { make: "Mazda", model: "Mz-6", amound: 4, price: 44000, onSale: false },
+//   { make: "Honda", model: "CR-8", amound: 14, price: 14000, onSale: true },
+//   { make: "Opel", model: "Op-8", amound: 1, price: 21000, onSale: true },
+//   { make: "Mazda", model: "Mz-8", amound: 4, price: 24000, onSale: false },
+// ];
+
+
+// const findCarsByModeAndPrise =(arr,mode,price)=>
+//   arr.filter(({make})=>make===mode).filter((item)=>item.price<=price);
+// ;
+
+
+// console.table(findCarsByModeAndPrise(cars,"Honda",30000));
+// console.table(findCarsByModeAndPrise(cars,"Mazda",30000));
+// console.table(findCarsByModeAndPrise(cars,"Opel",30000));
+
+
+
+
+// const findCarsByModeAndPrise =(arr,make,price)=>
+//   arr.filter(item=>item.make===make&&item.price<=price);
+// ;
+
+
+// console.table(findCarsByModeAndPrise(cars,"Honda",20000));
+// console.table(findCarsByModeAndPrise(cars,"Mazda",20000));
+// console.table(findCarsByModeAndPrise(cars,"Opel",20000));
+
+
+
+
+
+
+
+// const a=[1,4,2,6,3,9,7,5,8];
+// const b =[...a];
+
+
+// console.log(a);
+// console.log(b.sort());
+
+// const a=[1,4,2,6,3,9,7,5,8];
+
+
+
+// console.log(a);
+// console.log([...a].sort());
+// console.log([...a].sort((a,b)=>b-a));
+
+
+// const sortByIncreasing = (arr)=>[...arr].sort();
+
+// console.log(sortByIncreasing(a));
