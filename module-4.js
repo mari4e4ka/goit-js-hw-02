@@ -793,6 +793,56 @@
 // );
 // console.log(allLikes);
 
+// const contacts = [
+//   {
+//     firstName: "Akira",
+//     lastName: "Laine",
+//     number: "0543236543",
+//     likes: ["Pizza", "Coding", ["Brownie Points"]],
+//     isOnline: true,
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", ["Magic", ["Hagrid"]]],
+//     isOnline: false,
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//     isOnline: false,
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//     isOnline: false,
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//     isOnline: false,
+//   },
+// ];
+
+// const flatCont = contacts
+//   .map((i) => i.likes)
+//   .flat(3)
+//   .reduce((acc, like) => {
+//     acc[like] ? (acc[like] += 1) : (acc[like] = 1);
+//     return acc;
+//   }, {});
+// console.log(flatCont);
+
+// const allTags=contacts.flatMap(i=>i.likes);
+// console.log(allTags);
+
 // // const stat = allLikes.reduce((statAcc, like)=>{
 // //     if(statAcc[like]){
 // //         statAcc[like]+=1;
@@ -845,7 +895,6 @@
 // console.table(filterByPrise(cars, 30000));
 // console.table(filterByPrise(cars, 50000));
 
-
 // const cars = [
 //   { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
 //   { make: "Opel", model: "Op-6", amound: 1, price: 10000, onSale: true },
@@ -855,12 +904,9 @@
 
 // const getCarsWithDiscount = arr=> arr.filter(({onSale}) => onSale);
 
-
 // console.table(getCarsWithDiscount(cars));
 
-
-
-// 
+//
 
 // const cars = [
 //   { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
@@ -871,50 +917,79 @@
 //   { make: "Mazda", model: "Mz-8", amound: 4, price: 24000, onSale: false },
 // ];
 
-
 // const findCarsByModeAndPrise =(arr,mode,price)=>
 //   arr.filter(({make})=>make===mode).filter((item)=>item.price<=price);
 // ;
-
 
 // console.table(findCarsByModeAndPrise(cars,"Honda",30000));
 // console.table(findCarsByModeAndPrise(cars,"Mazda",30000));
 // console.table(findCarsByModeAndPrise(cars,"Opel",30000));
 
-
-
-
 // const findCarsByModeAndPrise =(arr,make,price)=>
 //   arr.filter(item=>item.make===make&&item.price<=price);
 // ;
-
 
 // console.table(findCarsByModeAndPrise(cars,"Honda",20000));
 // console.table(findCarsByModeAndPrise(cars,"Mazda",20000));
 // console.table(findCarsByModeAndPrise(cars,"Opel",20000));
 
-
-
-
-
-
-
 // const a=[1,4,2,6,3,9,7,5,8];
 // const b =[...a];
-
 
 // console.log(a);
 // console.log(b.sort());
 
 // const a=[1,4,2,6,3,9,7,5,8];
 
-
-
 // console.log(a);
 // console.log([...a].sort());
 // console.log([...a].sort((a,b)=>b-a));
 
-
 // const sortByIncreasing = (arr)=>[...arr].sort();
 
 // console.log(sortByIncreasing(a));
+
+// const cars = [
+//   { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
+//   { make: "Copel", model: "Op-6", amound: 1, price: 10000, onSale: true },
+//   { make: "Mazda", model: "Mz-6", amound: 4, price: 44000, onSale: false },
+//   { make: "Fonda", model: "CR-8", amound: 14, price: 14000, onSale: true },
+//   { make: "Opel", model: "Op-8", amound: 1, price: 21000, onSale: true },
+//   { make: "Azda", model: "Mz-8", amound: 4, price: 24000, onSale: false },
+// ];
+
+// const sortByName = (arr) =>
+//   [...arr].sort((a, b) => a.make[0] == b.make[0] ? 0 :  a.make[0] > b.make[0] ? 1 : -1);
+
+// console.table(sortByName(cars));
+
+// const increaseByPrice = arr=>[...arr].sort((a,b)=>a.price-b.price);
+
+// console.table(increaseByPrice(cars));
+
+// const arr = [4, 16, 3, 6, 22, 48, 2, 5, 67, 7, 3, 9];
+// console.log(arr);
+
+// const rez = arr
+//   .filter((i) => !(i % 2))
+//   .map((i) => i * 10)
+//   .sort((a, b) => a - b);
+
+// console.log(rez);
+
+// const cars = [
+//   { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
+//   { make: "Copel", model: "Op-6", amound: 1, price: 10000, onSale: true },
+//   { make: "Mazda", model: "Mz-6", amound: 4, price: 44000, onSale: false },
+//   { make: "Fonda", model: "CR-8", amound: 14, price: 14000, onSale: true },
+//   { make: "Opel", model: "Op-8", amound: 1, price: 21000, onSale: true },
+//   { make: "Azda", model: "Mz-8", amound: 4, price: 24000, onSale: false },
+// ];
+
+// const carsOnSaleSortedByPrice = cars.filter(({onSale})=>onSale).sort((a,b)=>a.price-b.price);
+// console.table(cars);
+// console.table(carsOnSaleSortedByPrice);
+
+// // LODASH
+// const a=_.min([4,2,3,6,5,2,1]);
+// console.log(a);
