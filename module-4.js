@@ -993,3 +993,131 @@
 // // LODASH
 // const a=_.min([4,2,3,6,5,2,1]);
 // console.log(a);
+
+// const cars = [
+//   { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
+//   { make: "Copel", model: "Op-6", amound: 1, price: 10000, onSale: true },
+//   { make: "Mazda", model: "Mz-6", amound: 4, price: 44000, onSale: false },
+//   { make: "Fonda", model: "CR-8", amound: 14, price: 14000, onSale: true },
+//   { make: "Opel", model: "Op-8", amound: 1, price: 21000, onSale: true },
+//   { make: "Azda", model: "Mz-8", amound: 4, price: 24000, onSale: false },
+// ];
+
+// const sotedList = (arr, order)=>[...arr].sort((a,b)=>order==="asc"?a.price-b.price:b.price-a.price);
+
+// console.table(sotedList(cars, "asc"));
+
+// console.table(sotedList(cars, "desc"));
+
+// const cars = [
+//   { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
+//   { make: "Copel", model: "Op-6", amound: 1, price: 10000, onSale: true },
+//   { make: "Mazda", model: "Mz-6", amound: 4, price: 44000, onSale: false },
+//   { make: "Fonda", model: "CR-8", amound: 14, price: 14000, onSale: true },
+//   { make: "Abel", model: "Op-8", amound: 1, price: 21000, onSale: true },
+//   { make: "Abda", model: "Mz-8", amound: 4, price: 24000, onSale: false },
+// ];
+
+// const sotedList = (arr, order) =>
+//   [...arr].sort((a, b) => {
+//     let rez;
+//     if (order === "asc") {
+//       a.make[0] > b.make[0] ? (rez = 1) : (rez = -1);
+//     } else {
+//       a.make[0] < b.make[0] ? (rez = 1) : (rez = -1);
+//     }
+//     return rez;
+//   });
+
+// const sotedList = (arr, order) =>
+//   [...arr].sort((a, b) => {
+//     if (order === "asc") {
+//       return a.make[0] > b.make[0] ? 1 : -1;
+//     } else {
+//       return a.make[0] < b.make[0] ? 1 : -1;
+//     }
+//   });
+
+// const sotedList = (arr, order) => {
+//   if (order === "asc") {
+//     return [...arr].sort((a, b) => a.make.localeCompare(b.make));
+//   } else {
+//     return [...arr].sort((a, b) => b.make.localeCompare(a.make));
+//   }
+// };
+
+// const sotedList = (arr, order) =>
+//   order === "asc"
+//     ? [...arr].sort((a, b) => a.make.localeCompare(b.make))
+//     : [...arr].sort((a, b) => b.make.localeCompare(a.make));
+
+// const sotedList = (arr, order) =>
+//   [...arr].sort(({ make: a }, { make: b }) =>
+//     order === "asc" ? a.localeCompare(b) : b.localeCompare(a)
+//   );
+
+// console.table(sotedList(cars, "asc"));
+// console.table(sotedList(cars, "desc"));
+// console.table(cars);
+
+// const cars = [
+//     { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
+//     { make: "Copel", model: "Op-6", amound: 1, price: 10000, onSale: true },
+//     { make: "Mazda", model: "Mz-6", amound: 4, price: 44000, onSale: false },
+//     { make: "Fonda", model: "CR-8", amound: 14, price: 14000, onSale: true },
+//     { make: "Abel", model: "Op-8", amound: 1, price: 21000, onSale: true },
+//     { make: "Abda", model: "Mz-8", amound: 4, price: 24000, onSale: false },
+//     { make: "Honda", model: "CR-6", amound: 14, price: 24000, onSale: true },
+//     { make: "Copel", model: "Op-6", amound: 1, price: 10000, onSale: true },
+//     { make: "Mazda", model: "Mz-6", amound: 4, price: 44000, onSale: false },
+//     { make: "Fonda", model: "CR-8", amound: 14, price: 14000, onSale: true },
+//     { make: "Abel", model: "Op-8", amound: 1, price: 21000, onSale: true },
+//     { make: "Abda", model: "Mz-8", amound: 4, price: 24000, onSale: false },
+//   ];
+// /**
+//  * count total amound of items
+//  * @param {Array} arr array of object
+//  * @returns Number - total amound of items
+//  */
+//   const totalAmound =arr=> arr.reduce((acc,{amound})=>acc+amound,0);
+//   console.log(typeof totalAmound(cars));
+//   console.log(`Загальна кількість автомобілів у салоні: ${totalAmound(cars)}`);
+
+// const num = "sdjfyhhfvdtdgdgg";
+
+// const rez = [...num].reduce((acc, item) => {
+//   acc.hasOwnProperty(item) ? (acc[item] += 1) : (acc[item] = 1);
+//   return acc;
+// }, {});
+
+// console.log(rez);
+
+// const num = "sdjfyhhfvdtdgdgg";
+
+// const rez = [...num].reduce((acc, item) => {
+//   item in acc ? (acc[item] += 1) : (acc[item] = 1);
+//   return acc;
+// }, {});
+
+// // console.log(rez);
+
+// const a = [
+//   "bla-bla-bla",
+//   "bla-bla-bla",
+//   "bla-bla-bla",
+//   "bla-bla-bla",
+//   "bla-bla-bla",
+//   "bla-bla-bla",
+// ];
+// const b = ["bla-bla-bla", "bla-bla-bla", "bla-bla-bla", "bla-bla-bla"];
+// const c = [];
+
+// const countItems = (arr) => arr.reduce((acc,item,idx)=>{
+//     const rez = acc+`${idx+1} - ${item}\n`;
+// return rez;
+// },
+// arr.length ?`Загальна кількість елементів масиву ${arr.length}\n`:`Пустий масив`);
+
+// console.log(countItems(a));
+// console.log(countItems(b));
+// console.log(countItems(c));
