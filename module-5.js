@@ -425,7 +425,46 @@
 // car1.changePrice(49000);
 // console.log(car1);
 
-
 // const car2 = new Car({ brand: "honda", model: "h-10", price: 54000 });
 // car2.changePrice(58000)
 // console.log(car2);
+
+// const User = function ({ name, mail, password }={}) {
+//   this.name = name;
+//   this.mail = mail;
+//   this.password = password;
+// };
+
+// User.prototype.changeMail = function (newMail) {
+//   this.mail = newMail;
+// };
+
+// User.prototype.changePassword = function (newPassword) {
+//   this.password = newPassword;
+// };
+
+// const userMango = new User({
+//   name: "Mango",
+//   mail: "mango@mail.com",
+//   password: "1234",
+// });
+
+// console.table(userMango);
+
+// userMango.changeMail("mango@supermail.com");
+
+// console.table(userMango);
+
+// userMango.changePassword("5678");
+
+// console.table(userMango);
+
+// User.showUser=function(user){
+//     console.log(`Користувач: `, user.name);
+//     console.log(`Пошта: `, user.mail);
+// }
+
+// User.showUser(userMango);
+// console.log(userMango);
+// console.log(User.prototype);
+
