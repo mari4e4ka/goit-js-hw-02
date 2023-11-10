@@ -468,3 +468,124 @@
 // console.log(userMango);
 // console.log(User.prototype);
 
+// class Car {
+//   constructor({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this._price = price;
+//   }
+
+//   get price(){
+//     return this._price;
+//   }
+
+//   set price(newPrice){
+//     this._price=newPrice;
+//   }
+// }
+
+// console.log(Car);
+
+// const car1 = new Car({ brand: "audi", model: "a-6", price: 43000 });
+// console.log(car1);
+
+// console.log(car1.price);
+// car1.price=50000;
+
+// console.log(car1.price);
+
+
+
+// class Vehicle {
+//       constructor({ brand, price }) {
+//         this.brand = brand;
+//         this._price = price;
+//       }
+    
+//       get price(){
+//         return console.log(this._price);;
+//       }
+    
+//       set price(newPrice){
+//        this._price=newPrice;
+//        return console.log(this._price);
+//       }
+//     }
+
+//     class Car extends Vehicle {
+//         constructor({ brand, price,model}){
+//             super({brand,price})
+//             this._model = model;
+//         }
+
+//         get model(){
+//             return console.log(this._model);;
+//           }
+        
+//           set model(newModel){
+//             this._model=newModel;
+//             return console.log(this._model);
+//           }
+
+//         getBrand(){
+//             return console.log(this.brand);
+//         }
+//     }
+    
+
+//     const car1 = new Car({ brand: "audi", price: 43000, model: "a-6" });
+//     console.log(car1);
+
+
+//     // car1.model;
+//     // car1.model="a-8";
+
+//     // car1.price;
+//     // car1.price=60000;
+
+
+//     const car2 ={ brand: "bmw", price: 33000, model: "b-6" };
+//     console.log(`car2`, car2);
+
+
+
+
+
+
+// class Vehicle {
+//       constructor({ brand, price }) {
+//         this.brand = brand;
+//         this._price = price;
+//       }
+    
+//       get price(){
+//         return console.log(this._price);;
+//       }
+    
+//       set price(newPrice){
+//        this._price=newPrice;
+//        return console.log(this._price);
+//       }
+//     }
+
+//     class Car extends Vehicle {
+//         constructor({ model, ...restProps}){
+//             super(restProps)
+//             this._model = model;
+//         }
+
+//         get model(){
+//             return console.log(this._model);;
+//           }
+        
+//           set model(newModel){
+//             this._model=newModel;
+//             return console.log(this._model);
+//           }
+
+//     }
+    
+
+    const car1 = new Car({ brand: "audi", price: 43000, model: "a-6" });
+    console.log(car1);
+
