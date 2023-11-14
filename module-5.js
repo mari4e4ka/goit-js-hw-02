@@ -494,18 +494,16 @@
 
 // console.log(car1.price);
 
-
-
 // class Vehicle {
 //       constructor({ brand, price }) {
 //         this.brand = brand;
 //         this._price = price;
 //       }
-    
+
 //       get price(){
 //         return console.log(this._price);;
 //       }
-    
+
 //       set price(newPrice){
 //        this._price=newPrice;
 //        return console.log(this._price);
@@ -521,7 +519,7 @@
 //         get model(){
 //             return console.log(this._model);;
 //           }
-        
+
 //           set model(newModel){
 //             this._model=newModel;
 //             return console.log(this._model);
@@ -531,11 +529,9 @@
 //             return console.log(this.brand);
 //         }
 //     }
-    
 
 //     const car1 = new Car({ brand: "audi", price: 43000, model: "a-6" });
 //     console.log(car1);
-
 
 //     // car1.model;
 //     // car1.model="a-8";
@@ -543,25 +539,19 @@
 //     // car1.price;
 //     // car1.price=60000;
 
-
 //     const car2 ={ brand: "bmw", price: 33000, model: "b-6" };
 //     console.log(`car2`, car2);
-
-
-
-
-
 
 // class Vehicle {
 //       constructor({ brand, price }) {
 //         this.brand = brand;
 //         this._price = price;
 //       }
-    
+
 //       get price(){
 //         return console.log(this._price);;
 //       }
-    
+
 //       set price(newPrice){
 //        this._price=newPrice;
 //        return console.log(this._price);
@@ -577,15 +567,72 @@
 //         get model(){
 //             return console.log(this._model);;
 //           }
-        
+
 //           set model(newModel){
 //             this._model=newModel;
 //             return console.log(this._model);
 //           }
 
 //     }
-    
 
-    const car1 = new Car({ brand: "audi", price: 43000, model: "a-6" });
-    console.log(car1);
+// const car1 = new Car({ brand: "audi", price: 43000, model: "a-6" });
+// console.log(car1);
 
+// class User {
+//   static counter = 0;
+//   static addUser() {
+//     this.counter += 1;
+//     console.log(`Кількість зареєстрованих користувачів - ${this.counter}`);
+//   }
+//   #pasword;
+//   constructor({ name, pasword }) {
+//     this.name = name;
+//     this.#pasword = pasword;
+//     User.addUser();
+//   }
+
+//   get pas(){
+//     return this.#pasword;
+//   }
+
+//   set pas(newpas){
+//     const message = prompt("Для зміни паролю введіть старий пароль");
+//     if (message===this.#pasword){
+//          this.#pasword=newpas;   
+//          console.log("Ваш пароль успішно змінено");
+//     } else {
+//     // const alert = alert("Ви ввели невірний пароль");
+//     console.log("Ви ввели невірний пароль");
+//     }
+
+//   }
+// }
+
+// const user1 = new User({ name: "Mango1", pasword: "12345" });
+// const user2 = new User({ name: "Mango2", pasword: "12345" });
+// const user3 = new User({ name: "Mango3", pasword: "12345" });
+// const user4 = new User({ name: "Mango4", pasword: "12345" });
+
+// console.log(user1);
+// console.log(user1.name);
+
+// user1.name="Kiwi";
+// console.log(user1);
+// console.log(user1.name);
+
+
+// console.log(user1.pas);
+// user1.pas=99999;
+// console.log(user1);
+
+// class Admin extends User{
+//     constructor({name,pasword,id}){
+// super({name,pasword});
+// this.id=id;
+//     }
+// }
+// const admin1 = new Admin({ name: "Poly", pasword: "123456789", id:"001" });
+
+// console.log(admin1);
+
+// console.log(admin1.pas);
